@@ -1,109 +1,402 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<!doctype html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>syilfre | Roblox Full Stack Scripter</title>
-    <meta name="description" content="Portfolio of syilfre, a generalist full stack Roblox scripter with 3 years of experience. View code samples and systems." />
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <meta
+      name="description"
+      content="Portfolio of syilfre, a full stack Roblox scripter focused on scalable systems, UI, gameplay, and data architecture."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=Sora:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-noise" aria-hidden="true"></div>
+    <header class="site-header" id="top">
+      <nav class="nav shell" aria-label="Main navigation">
+        <a class="brand" href="#top" aria-label="Back to top">syilfre</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about">About</a></li>
+          <li><a href="#studios">Studios</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#systems">Systems</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#commission">Guide</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              bg: {
-                DEFAULT: '#050816', // Very dark indigo
-                card: '#0B1020',
-                cardHover: '#12192e',
-              },
-              primary: {
-                DEFAULT: '#14F4FF', // Electric cyan
-                hover: '#00E5FF',
-              },
-              accent: {
-                magenta: '#FF47C2',
-                purple: '#8B5CFF',
-                lime: '#B6FF48',
-              },
-              text: {
-                primary: '#F6F7FF',
-                secondary: '#A0A7C1',
-                muted: '#6B7292',
-              }
-            },
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-              display: ['Space Grotesk', 'sans-serif'],
-              mono: ['JetBrains Mono', 'monospace'],
-            },
-            animation: {
-              'float': 'float 6s ease-in-out infinite',
-              'float-delayed': 'float 6s ease-in-out 3s infinite',
-              'pulse-glow': 'pulse-glow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-            },
-            keyframes: {
-              float: {
-                '0%, 100%': { transform: 'translateY(0)' },
-                '50%': { transform: 'translateY(-20px)' },
-              },
-              'pulse-glow': {
-                '0%, 100%': { opacity: '0.5' },
-                '50%': { opacity: '1' },
-              }
-            }
-          }
-        }
-      }
-    </script>
-    <style>
-      /* Custom Scrollbar */
-      ::-webkit-scrollbar {
-        width: 10px;
-        height: 10px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #050816; 
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #1B2438; 
-        border-radius: 5px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #2D3A56; 
-      }
-      
-      /* Hide scrollbar for code block mainly but allow scroll */
-      .no-scrollbar::-webkit-scrollbar {
-        display: none;
-      }
-      .no-scrollbar {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-      }
-    </style>
+    <main>
+      <section class="hero shell">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Roblox Full Stack Scripter</p>
+          <h1>
+            I build Roblox experiences that are
+            <span>fast, scalable, and maintainable.</span>
+          </h1>
+          <p class="lead">
+            3+ years of full stack scripting across gameplay, UI, and backend architecture.
+            Contributed to experiences with over
+            <strong><span data-counter="107">107</span>M+ visits</strong>.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#systems">View Systems</a>
+            <a class="btn btn-secondary" href="https://github.com/syilfre" target="_blank" rel="noreferrer">Open GitHub</a>
+          </div>
+        </div>
+        <aside class="snapshot reveal delay-1" aria-label="Profile snapshot">
+          <p class="snapshot-label">Profile Snapshot</p>
+          <h2>syilfre</h2>
+          <p class="snapshot-role">Generalist Roblox Scripter</p>
+          <dl class="snapshot-grid">
+            <div>
+              <dt>Experience</dt>
+              <dd>3+ Years</dd>
+            </div>
+            <div>
+              <dt>Reach</dt>
+              <dd><span data-counter="107">107</span>M+ Visits</dd>
+            </div>
+            <div>
+              <dt>Focus</dt>
+              <dd>Systems + Data</dd>
+            </div>
+            <div>
+              <dt>Workflow</dt>
+              <dd>Modular + Clean</dd>
+            </div>
+          </dl>
+        </aside>
+      </section>
 
-<link rel="stylesheet" href="/index.css">
-  <script type="importmap">
-{
-  "imports": {
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
-  }
-}
-</script>
-  <script type="module" crossorigin src="/assets/index-7LV4I9Pe.js"></script>
-</head>
-  <body class="bg-bg text-text-primary antialiased selection:bg-primary/30 selection:text-white">
-    <div id="root"></div>
-</body>
+      <section class="section shell" id="studios">
+        <div class="section-head reveal">
+          <p class="eyebrow">Studios</p>
+          <h2>Teams and creators I have worked with</h2>
+        </div>
+        <div class="studio-marquee-wrap reveal delay-1" aria-label="Studio logos moving banner">
+          <div class="studio-marquee">
+            <div class="studio-track">
+              <figure class="studio-logo logo-glamour">
+                <div class="logo-image" role="img" aria-label="Glamour Studios logo"></div>
+              </figure>
+              <figure class="studio-logo logo-rainbow">
+                <div class="logo-image" role="img" aria-label="Rainbow tower logo"></div>
+              </figure>
+              <figure class="studio-logo logo-riviera">
+                <div class="logo-image" role="img" aria-label="Riviera Development logo"></div>
+              </figure>
+              <figure class="studio-logo logo-hammer">
+                <div class="logo-image" role="img" aria-label="Hammer logo"></div>
+              </figure>
+              <figure class="studio-logo logo-hg">
+                <div class="logo-image" role="img" aria-label="HG creator logo"></div>
+              </figure>
+              <figure class="studio-logo logo-hand">
+                <div class="logo-image" role="img" aria-label="Waving hand logo"></div>
+              </figure>
+              <figure class="studio-logo logo-crate">
+                <div class="logo-image" role="img" aria-label="Red crate logo"></div>
+              </figure>
+              <figure class="studio-logo logo-f">
+                <div class="logo-image" role="img" aria-label="F letter logo"></div>
+              </figure>
+            </div>
+            <div class="studio-track" aria-hidden="true">
+              <figure class="studio-logo logo-glamour">
+                <div class="logo-image"></div>
+              </figure>
+              <figure class="studio-logo logo-rainbow">
+                <div class="logo-image"></div>
+              </figure>
+              <figure class="studio-logo logo-riviera">
+                <div class="logo-image"></div>
+              </figure>
+              <figure class="studio-logo logo-hammer">
+                <div class="logo-image"></div>
+              </figure>
+              <figure class="studio-logo logo-hg">
+                <div class="logo-image"></div>
+              </figure>
+              <figure class="studio-logo logo-hand">
+                <div class="logo-image"></div>
+              </figure>
+              <figure class="studio-logo logo-crate">
+                <div class="logo-image"></div>
+              </figure>
+              <figure class="studio-logo logo-f">
+                <div class="logo-image"></div>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section shell" id="featured">
+        <div class="commission-card reveal">
+          <p>
+            Commissioned by the creators of
+            <a
+              href="https://www.roblox.com/games/15444929588/Skibidi-Tower-Defense"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Skibidi Tower Defense
+            </a>
+            to script two games.
+          </p>
+          <span class="visits-tag">718.0M+ Visits</span>
+        </div>
+      </section>
+
+      <section class="section shell" id="about">
+        <div class="section-head reveal">
+          <p class="eyebrow">About</p>
+          <h2>Reliable systems for real production games</h2>
+        </div>
+        <div class="about-card reveal delay-1">
+          <p>
+            I work end-to-end in Roblox: gameplay loops, client/server communication, UI behavior,
+            and persistent data architecture. I prioritize clean module boundaries and predictable behavior
+            so teams can ship faster without building technical debt.
+          </p>
+          <p>
+            I can join existing codebases or build from a clean baseplate depending on scope.
+            My delivery process stays transparent with clear milestones, testing, and iteration.
+          </p>
+          <p class="note">
+            By hiring me, you agree to the terms in the
+            <a href="#commission">Commission Guide</a>.
+          </p>
+        </div>
+      </section>
+
+      <section class="section shell" id="skills">
+        <div class="section-head reveal">
+          <p class="eyebrow">Skill Areas</p>
+          <h2>Coverage across gameplay, UI, and backend services</h2>
+        </div>
+        <div class="skills-grid">
+          <article class="skill reveal">
+            <h3>Core Roblox Scripting</h3>
+            <ul>
+              <li>Luau / Roblox Lua</li>
+              <li>Client-Server Remotes</li>
+              <li>ModuleScripts Architecture</li>
+              <li>Replication & Optimization</li>
+            </ul>
+          </article>
+          <article class="skill reveal delay-1">
+            <h3>Gameplay & Systems</h3>
+            <ul>
+              <li>Wave & Enemy Systems</li>
+              <li>Combat & Hit Detection</li>
+              <li>State Machines & AI</li>
+              <li>Interconnected Game Loops</li>
+            </ul>
+          </article>
+          <article class="skill reveal delay-2">
+            <h3>UI & UX</h3>
+            <ul>
+              <li>Responsive Layouts</li>
+              <li>TweenService Animations</li>
+              <li>Roact Familiarity</li>
+              <li>Interactive HUDs</li>
+            </ul>
+          </article>
+          <article class="skill reveal">
+            <h3>Data & Backend</h3>
+            <ul>
+              <li>DataStoreService</li>
+              <li>ProfileService</li>
+              <li>MemoryStore</li>
+              <li>Security & Validation</li>
+            </ul>
+          </article>
+          <article class="skill reveal delay-1">
+            <h3>Collaboration & Pipeline</h3>
+            <ul>
+              <li>Version Control (Git)</li>
+              <li>Task Tracking</li>
+              <li>Clear Communication</li>
+              <li>Documentation</li>
+            </ul>
+          </article>
+          <article class="skill reveal delay-2">
+            <h3>Tooling & Optimization</h3>
+            <ul>
+              <li>Debugging Tools</li>
+              <li>Performance Profiling</li>
+              <li>Module Encapsulation</li>
+              <li>Refactoring</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section shell" id="systems">
+        <div class="section-head reveal">
+          <p class="eyebrow">Selected Systems</p>
+          <h2>Production-style modules and gameplay foundations</h2>
+        </div>
+        <div class="systems-list">
+          <article class="system reveal">
+            <div>
+              <h3>Wave Manager</h3>
+              <p>Spawns enemy waves with scaling difficulty, pacing logic, and event hooks for UI/gameplay sync.</p>
+            </div>
+            <a href="https://github.com/syilfre/hd/blob/main/WaveSystem.lua" target="_blank" rel="noreferrer">View Code</a>
+          </article>
+          <article class="system reveal delay-1">
+            <div>
+              <h3>Data Service Module</h3>
+              <p>Centralized profile/data access with safe updates, modular APIs, and durable persistence flow.</p>
+            </div>
+            <a href="https://github.com/syilfre/DataService/blob/main/dataService.lua" target="_blank" rel="noreferrer">View Code</a>
+          </article>
+          <article class="system reveal delay-2">
+            <div>
+              <h3>Client Chunk-Loader</h3>
+              <p>Client-side chunk generation and unloading to keep world rendering efficient and responsive.</p>
+            </div>
+            <a href="https://github.com/syilfre/CodingExamples/blob/main/Client%20Chunk%20Generation.lua" target="_blank" rel="noreferrer">View Code</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section shell" id="process">
+        <div class="section-head reveal">
+          <p class="eyebrow">Process</p>
+          <h2>Clear delivery from scope to final integration</h2>
+        </div>
+        <ol class="timeline">
+          <li class="reveal">
+            <h3>01 Contact</h3>
+            <p>You share features, systems, references, and goals for the build.</p>
+          </li>
+          <li class="reveal delay-1">
+            <h3>02 Planning</h3>
+            <p>Scope, pricing, and timeline are aligned with specific deliverables.</p>
+          </li>
+          <li class="reveal delay-2">
+            <h3>03 Development</h3>
+            <p>Systems are implemented with modular code and appropriate Roblox services.</p>
+          </li>
+          <li class="reveal">
+            <h3>04 Testing</h3>
+            <p>Behavior is validated, polished, and revised from your direct feedback.</p>
+          </li>
+          <li class="reveal delay-1">
+            <h3>05 Completion</h3>
+            <p>Final delivery is packaged and I can help with integration into your place.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section shell" id="commission">
+        <div class="section-head reveal">
+          <p class="eyebrow">Commission Guide</p>
+          <h2>Simple workflow, clear payment terms</h2>
+        </div>
+        <div class="guide-grid">
+          <article class="guide-block reveal">
+            <h3>Workflow</h3>
+            <ol>
+              <li>You send the task and preferred payment method.</li>
+              <li>I send a quote and ask if you have any questions.</li>
+              <li>I start scripting once scope is confirmed.</li>
+              <li>You test the work.</li>
+              <li>You pay.</li>
+              <li>I deliver files.</li>
+            </ol>
+          </article>
+          <article class="guide-block reveal delay-1">
+            <h3>Payment Terms</h3>
+            <ul>
+              <li>Payment can be done per task or upon completion.</li>
+              <li>Upon-completion payment may vary and be split into phases depending on scope.</li>
+              <li>Any phase structure is communicated beforehand.</li>
+            </ul>
+          </article>
+          <article class="guide-block reveal delay-2">
+            <h3>Methods & Policy</h3>
+            <ul>
+              <li>Crypto</li>
+              <li>PayPal</li>
+              <li>Robux (DevEx rates + tax)</li>
+              <li>No refunds once a file has been sent.</li>
+            </ul>
+          </article>
+          <article class="guide-block reveal">
+            <h3>Turnaround Times</h3>
+            <ul>
+              <li>Small-medium tasks: 1-5 hours from start.</li>
+              <li>Small games: 1-2 days upon start.</li>
+              <li>Trendy front-page style games: 2-4 days.</li>
+              <li>For bigger scopes, message me for an accurate estimate.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section shell" id="contact">
+        <div class="section-head reveal">
+          <p class="eyebrow">Contact</p>
+          <h2>Direct channels for commissions and collaborations</h2>
+        </div>
+        <div class="contact-grid">
+          <a
+            class="contact-card reveal"
+            href="https://discord.com/users/1004306737525952572"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <h3>Discord</h3>
+            <p>@coto3p</p>
+            <span>Fastest way to discuss scope</span>
+          </a>
+          <a
+            class="contact-card reveal delay-1"
+            href="https://www.roblox.com/users/6152191844/profile"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <h3>Roblox</h3>
+            <p>syilfre</p>
+            <span>Profile and in-platform identity</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-wrap">
+        <div class="footer-meta">
+          <p>© <span id="year"></span> syilfre. All rights reserved.</p>
+          <p class="footer-terms">
+            By commissioning, you agree to the
+            <a href="#commission">Commission Guide</a> terms and refund policy.
+          </p>
+        </div>
+        <div class="footer-links">
+          <a href="https://github.com/syilfre" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://discord.com/users/1004306737525952572" target="_blank" rel="noreferrer">Discord</a>
+          <a href="https://www.roblox.com/users/6152191844/profile" target="_blank" rel="noreferrer">Roblox</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
 </html>
