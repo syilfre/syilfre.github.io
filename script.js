@@ -5,6 +5,9 @@ const revealItems = document.querySelectorAll(".reveal");
 const yearNode = document.getElementById("year");
 const counterNodes = document.querySelectorAll("[data-counter]");
 const youtubePlayers = document.querySelectorAll("[data-youtube-url]");
+const commissionForm = document.getElementById("commissionForm");
+const formStatus = document.getElementById("formStatus");
+const scopeSummary = document.getElementById("scopeSummary");
 
 if (yearNode) {
   yearNode.textContent = String(new Date().getFullYear());
@@ -22,6 +25,35 @@ if (menuToggle && navLinks) {
       menuToggle.setAttribute("aria-expanded", "false");
     });
   });
+}
+
+const sectionLinks = Array.from(navAnchors).filter((anchor) => anchor.hash);
+const sectionNodes = sectionLinks
+  .map((anchor) => document.querySelector(anchor.hash))
+  .filter(Boolean);
+
+if (sectionNodes.length > 0) {
+  const setActiveLink = (id) => {
+    sectionLinks.forEach((anchor) => {
+      anchor.classList.toggle("active", anchor.hash === `#${id}`);
+    });
+  };
+
+  const navObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveLink(entry.target.id);
+        }
+      });
+    },
+    {
+      rootMargin: "-35% 0px -55% 0px",
+      threshold: 0,
+    }
+  );
+
+  sectionNodes.forEach((section) => navObserver.observe(section));
 }
 
 const revealObserver = new IntersectionObserver(
@@ -156,3 +188,29 @@ youtubePlayers.forEach((player) => {
 
   player.append(button);
 });
+
+if (commissionForm && formStatus && scopeSummary) {
+  commissionForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(commissionForm);
+    const summaryLines = [
+      "Commission Scope",
+      `Name: ${formData.get("name") || ""}`,
+      `Discord: ${formData.get("discord") || ""}`,
+      `Project type: ${formData.get("projectType") || ""}`,
+      `Budget: ${formData.get("budget") || ""}`,
+      `Deadline: ${formData.get("deadline") || ""}`,
+      `Existing codebase: ${formData.get("existingCodebase") || ""}`,
+      "",
+      "Description / references:",
+      formData.get("description") || "",
+    ];
+
+    scopeSummary.value = summaryLines.join("\n");
+    scopeSummary.hidden = false;
+    scopeSummary.focus();
+    scopeSummary.select();
+    formStatus.textContent = "Summary ready. Send it on Discord for a quote.";
+  });
+}
