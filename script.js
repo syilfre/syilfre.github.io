@@ -2,12 +2,12 @@ const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
 const navAnchors = document.querySelectorAll(".nav-links a");
 const revealItems = document.querySelectorAll(".reveal");
+const mediaCards = document.querySelectorAll("[data-youtube-url]");
 const yearNode = document.getElementById("year");
-const counterNodes = document.querySelectorAll("[data-counter]");
-const youtubePlayers = document.querySelectorAll("[data-youtube-url]");
-const commissionForm = document.getElementById("commissionForm");
+const scopeForm = document.getElementById("scopeForm");
 const formStatus = document.getElementById("formStatus");
 const scopeSummary = document.getElementById("scopeSummary");
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 if (yearNode) {
   yearNode.textContent = String(new Date().getFullYear());
@@ -17,25 +17,33 @@ if (menuToggle && navLinks) {
   menuToggle.addEventListener("click", () => {
     const isOpen = navLinks.classList.toggle("open");
     menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    document.body.classList.toggle("menu-open", isOpen);
   });
 
   navAnchors.forEach((anchor) => {
     anchor.addEventListener("click", () => {
       navLinks.classList.remove("open");
       menuToggle.setAttribute("aria-expanded", "false");
+      document.body.classList.remove("menu-open");
     });
   });
 }
 
 const sectionLinks = Array.from(navAnchors).filter((anchor) => anchor.hash);
-const sectionNodes = sectionLinks
+const sections = sectionLinks
   .map((anchor) => document.querySelector(anchor.hash))
   .filter(Boolean);
 
-if (sectionNodes.length > 0) {
+if (sections.length > 0) {
   const setActiveLink = (id) => {
     sectionLinks.forEach((anchor) => {
-      anchor.classList.toggle("active", anchor.hash === `#${id}`);
+      const isActive = anchor.hash === `#${id}`;
+      anchor.classList.toggle("active", isActive);
+      if (isActive) {
+        anchor.setAttribute("aria-current", "page");
+      } else {
+        anchor.removeAttribute("aria-current");
+      }
     });
   };
 
@@ -48,69 +56,53 @@ if (sectionNodes.length > 0) {
       });
     },
     {
-      rootMargin: "-35% 0px -55% 0px",
+      rootMargin: "-36% 0px -54% 0px",
       threshold: 0,
     }
   );
 
-  sectionNodes.forEach((section) => navObserver.observe(section));
+  sections.forEach((section) => navObserver.observe(section));
 }
 
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        revealObserver.unobserve(entry.target);
+if (reduceMotion) {
+  revealItems.forEach((item) => item.classList.add("visible"));
+} else {
+  const showVisibleReveals = () => {
+    revealItems.forEach((item) => {
+      if (item.classList.contains("visible")) {
+        return;
+      }
+
+      const rect = item.getBoundingClientRect();
+
+      if (rect.top < window.innerHeight + 180 && rect.bottom > 0) {
+        item.classList.add("visible");
       }
     });
-  },
-  {
-    threshold: 0.18,
-    rootMargin: "0px 0px -40px 0px",
-  }
-);
-
-revealItems.forEach((item) => revealObserver.observe(item));
-
-const animateCounter = (node) => {
-  const target = Number(node.getAttribute("data-counter"));
-  if (!Number.isFinite(target)) {
-    return;
-  }
-
-  const duration = 1450;
-  const start = performance.now();
-
-  const run = (now) => {
-    const progress = Math.min((now - start) / duration, 1);
-    const value = Math.floor(progress * target);
-    node.textContent = String(value);
-    if (progress < 1) {
-      requestAnimationFrame(run);
-    } else {
-      node.textContent = String(target);
-    }
   };
 
-  requestAnimationFrame(run);
-};
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      rootMargin: "0px 0px 180px 0px",
+      threshold: 0.16,
+    }
+  );
 
-const counterObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        animateCounter(entry.target);
-        counterObserver.unobserve(entry.target);
-      }
-    });
-  },
-  {
-    threshold: 0.55,
-  }
-);
-
-counterNodes.forEach((node) => counterObserver.observe(node));
+  revealItems.forEach((item) => revealObserver.observe(item));
+  requestAnimationFrame(showVisibleReveals);
+  setTimeout(showVisibleReveals, 500);
+  setTimeout(showVisibleReveals, 1400);
+  window.addEventListener("hashchange", () => requestAnimationFrame(showVisibleReveals));
+  window.addEventListener("load", () => setTimeout(showVisibleReveals, 120));
+}
 
 const getYouTubeId = (url) => {
   if (!url) {
@@ -142,75 +134,36 @@ const getYouTubeId = (url) => {
   return null;
 };
 
-youtubePlayers.forEach((player) => {
-  const url = player.getAttribute("data-youtube-url")?.trim();
-  const title = player.getAttribute("data-video-title") || "Gameplay video";
-  const videoId = getYouTubeId(url);
+mediaCards.forEach((card) => {
+  const videoId = getYouTubeId(card.getAttribute("data-youtube-url"));
 
-  if (!url || !videoId) {
-    player.classList.add("is-empty");
-    return;
+  if (videoId) {
+    card.style.setProperty("--thumb", `url("https://img.youtube.com/vi/${videoId}/hqdefault.jpg")`);
   }
-
-  player.style.setProperty("--thumb", `url("https://img.youtube.com/vi/${videoId}/hqdefault.jpg")`);
-  player.replaceChildren();
-
-  const button = document.createElement("button");
-  button.className = "video-play";
-  button.type = "button";
-  button.setAttribute("aria-label", `Play ${title}`);
-
-  const icon = document.createElement("span");
-  icon.className = "play-icon";
-  icon.setAttribute("aria-hidden", "true");
-
-  const label = document.createElement("span");
-  label.className = "video-title";
-  label.textContent = title;
-
-  button.append(icon, label);
-
-  button.addEventListener("click", () => {
-    const iframe = document.createElement("iframe");
-    const playerOrigin = window.location.origin && window.location.origin !== "null"
-      ? `&origin=${encodeURIComponent(window.location.origin)}`
-      : "";
-
-    iframe.title = title;
-    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&playsinline=1${playerOrigin}`;
-    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
-    iframe.referrerPolicy = "strict-origin-when-cross-origin";
-    iframe.allowFullscreen = true;
-
-    player.classList.add("is-playing");
-    player.replaceChildren(iframe);
-  });
-
-  player.append(button);
 });
 
-if (commissionForm && formStatus && scopeSummary) {
-  commissionForm.addEventListener("submit", (event) => {
+if (scopeForm && formStatus && scopeSummary) {
+  scopeForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    const formData = new FormData(commissionForm);
+    const formData = new FormData(scopeForm);
     const summaryLines = [
       "Commission Scope",
-      `Name: ${formData.get("name") || ""}`,
+      `Name or studio: ${formData.get("name") || ""}`,
       `Discord: ${formData.get("discord") || ""}`,
       `Project type: ${formData.get("projectType") || ""}`,
+      `Payment method: ${formData.get("paymentMethod") || ""}`,
       `Budget: ${formData.get("budget") || ""}`,
       `Deadline: ${formData.get("deadline") || ""}`,
-      `Existing codebase: ${formData.get("existingCodebase") || ""}`,
       "",
-      "Description / references:",
-      formData.get("description") || "",
+      "Scope and references:",
+      formData.get("scope") || "",
     ];
 
     scopeSummary.value = summaryLines.join("\n");
     scopeSummary.hidden = false;
     scopeSummary.focus();
     scopeSummary.select();
-    formStatus.textContent = "Summary ready. Send it on Discord for a quote.";
+    formStatus.textContent = "Scope summary ready. Send it on Discord for a quote.";
   });
 }

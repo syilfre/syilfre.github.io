@@ -3,643 +3,408 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>syilfre | Roblox Systems Developer</title>
+    <title>syail | Roblox Luau Systems Developer</title>
     <meta
       name="description"
-      content="Portfolio of syilfre, a Roblox systems developer building gameplay systems, UI flows, backend services, DataStores, monetization, and server-authoritative mechanics."
+      content="Portfolio of syail, a Roblox Luau systems developer building scalable gameplay, UI, DataStore, monetization, and backend systems for Roblox creators."
     />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=Sora:wght@400;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Sora:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="page-noise" aria-hidden="true"></div>
-    <header class="site-header" id="top">
+    <div class="grid-bg" aria-hidden="true"></div>
+    <div class="scanline" aria-hidden="true"></div>
+
+    <header class="site-header">
       <nav class="nav shell" aria-label="Main navigation">
-        <a class="brand" href="#top" aria-label="Back to top">syilfre</a>
-        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+        <a class="brand" href="#home" aria-label="syail home">syail</a>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle menu" aria-expanded="false">
           <span></span>
           <span></span>
         </button>
         <ul class="nav-links" id="navLinks">
-          <li><a href="#showcases">Showcases</a></li>
-          <li><a href="#games">Work</a></li>
-          <li><a href="#studios">Studios</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#systems">Code</a></li>
-          <li><a href="#process">Process</a></li>
-          <li><a href="#commission">Pricing</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#finished">Finished</a></li>
+          <li><a href="#systems">Systems</a></li>
+          <li><a href="#rates">Rates</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="nav-socials" aria-label="Profile links">
+          <a href="https://www.roblox.com/users/6152191844/profile" target="_blank" rel="noreferrer">
+            <span class="social-mark">R</span>
+            Roblox
+          </a>
+          <a href="https://discord.com/users/1004306737525952572" target="_blank" rel="noreferrer">
+            <span class="social-mark">D</span>
+            Discord
+          </a>
+        </div>
       </nav>
     </header>
 
     <main>
-      <section class="hero shell" id="hero">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">Roblox systems developer</p>
-          <h1>I engineer bulletproof Roblox systems that scale to millions of players.</h1>
-          <p class="lead">
-            I build gameplay systems, UI flows, backend services, DataStores, monetization, and
-            server-authoritative mechanics for Roblox games with over
-            <strong><span data-counter="107">107</span>M+ contributed visits</strong>.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#contact">Start a Commission</a>
-            <a class="btn btn-secondary" href="#games">View Work</a>
-          </div>
-          <div class="trust-row" aria-label="Trust highlights">
-            <span>3+ Years Experience</span>
-            <span><span data-counter="107">107</span>M+ Contributed Visits</span>
-            <span>Systems, UI, Data</span>
-            <span>Fast Turnaround</span>
-          </div>
+      <section class="hero section-panel" id="home">
+        <div class="hero-lines" aria-hidden="true">
+          <span class="line line-left"></span>
+          <span class="line line-right"></span>
+          <span class="spark spark-one"></span>
+          <span class="spark spark-two"></span>
+          <span class="spark spark-three"></span>
         </div>
-
-        <aside class="snapshot reveal delay-1" aria-label="Profile snapshot">
-          <div class="availability-pill">Available for commissions</div>
-          <p class="snapshot-label">Profile Snapshot</p>
-          <h2>syilfre</h2>
-          <p class="snapshot-role">Roblox Systems Developer</p>
-          <p class="snapshot-summary">
-            Response time is usually same day. Best fit for simulators, tower games, tycoons,
-            UI systems, and teams needing reliable scripting support.
-          </p>
-          <dl class="snapshot-grid">
-            <div>
-              <dt>Experience</dt>
-              <dd>3+ Years</dd>
-            </div>
-            <div>
-              <dt>Reach</dt>
-              <dd><span data-counter="107">107</span>M+ Visits</dd>
-            </div>
-            <div>
-              <dt>Focus</dt>
-              <dd>UI, Gameplay, Backend</dd>
-            </div>
-            <div>
-              <dt>Delivery</dt>
-              <dd>Fast + Modular</dd>
-            </div>
-          </dl>
-          <a class="snapshot-cta" href="#contact">Send scope</a>
-        </aside>
-      </section>
-
-      <section class="section shell visual-priority" id="showcases">
-        <div class="section-head reveal">
-          <p class="eyebrow">Video Showcase</p>
-          <h2>Watch the systems working in-game.</h2>
-          <p class="section-copy">Production-style systems are easier to trust when you can see the full loop running.</p>
-        </div>
-        <div class="showcase-list">
-          <article class="showcase-card reveal delay-1">
-            <div class="showcase-video" aria-label="Real-Estate Simulator video showcase">
-              <iframe
-                title="Real-Estate Simulator showcase"
-                src="https://streamable.com/e/4eb85q?"
-                allow="fullscreen; picture-in-picture"
-                allowfullscreen
-                loading="lazy"
-              ></iframe>
-            </div>
-            <div class="showcase-copy">
-              <div class="showcase-tabs" aria-label="Showcase feature tabs">
-                <span>Real Estate Simulator</span>
-                <span>UI Systems</span>
-                <span>Economy</span>
-                <span>Data Saving</span>
-                <span>Loans</span>
-                <span>Tenant Logic</span>
-              </div>
-              <h3>Server-authoritative real estate simulator prototype.</h3>
-              <p>
-                Built a server-authoritative real estate simulator prototype with property purchasing,
-                loan financing, rental income, resale, tenant management, and custom UI flows.
-              </p>
-              <ul class="feature-list">
-                <li>Property buying, resale, and management flows.</li>
-                <li>Tenant selection, eviction, and recurring rental income.</li>
-                <li>Loan payoff UI, animated overlays, and background/menu music crossfades.</li>
-              </ul>
-              <div class="showcase-actions">
-                <a class="btn btn-secondary" href="https://streamable.com/4eb85q" target="_blank" rel="noreferrer">Watch 30 sec demo</a>
-                <a class="btn btn-primary" href="#contact">Request similar system</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section shell section-tight" id="featured">
-        <div class="commission-card case-preview reveal">
-          <div>
-            <p class="eyebrow">Case-study preview</p>
-            <h2>Commissioned by creators of Skibidi Tower Defense.</h2>
-            <p>
-              Scripted two games for creators behind a 718M+ visit Roblox experience, with production
-              support across gameplay systems, fixes, and integration.
-            </p>
-          </div>
-          <div class="case-actions">
-            <span class="visits-tag">718M+ Visits</span>
-            <a class="btn btn-primary" href="#games">View related work</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section shell" id="games">
-        <div class="section-head reveal">
-          <p class="eyebrow">Featured Case Studies</p>
-          <h2>Shipped work across live Roblox games.</h2>
-          <p class="section-copy">
-            Each card shows my role, the systems I touched, and the proof clients care about most:
-            real games with real players.
-          </p>
-        </div>
-        <div class="games-grid">
-          <article class="game-card featured-card reveal">
-            <div
-              class="video-player"
-              data-youtube-url="https://www.youtube.com/watch?v=qXfE_DKKa-M"
-              data-video-title="Morph Tower gameplay"
-            >
-              <a class="video-fallback" href="https://www.youtube.com/watch?v=qXfE_DKKa-M" target="_blank" rel="noreferrer">
-                Watch Demo
-              </a>
-            </div>
-            <div class="game-card-body">
-              <div class="card-topline">
-                <span class="featured-label">Featured</span>
-                <span>54.4M+ visits</span>
-              </div>
-              <h3>Morph Tower</h3>
-              <p class="game-summary">
-                Built and maintained UI, DataStore, currency, revive, spectate, and troll menu systems
-                for a 50M+ visit Roblox game.
-              </p>
-              <div class="game-tags" aria-label="Morph Tower systems">
-                <span>UI Systems</span>
-                <span>DataStore</span>
-                <span>Currency</span>
-                <span>Gameplay Fixes</span>
-                <span>Live Game Support</span>
-              </div>
-              <div class="game-breakdown">
-                <div>
-                  <h4>Problem</h4>
-                  <p>Live tower gameplay needed fixes around revive, spectate, data, and player-facing menus.</p>
-                </div>
-                <div>
-                  <h4>What I built</h4>
-                  <p>UI frontend work, currency saving, troll menu interactions, and support for revive/spectate flows.</p>
-                </div>
-                <div>
-                  <h4>Result</h4>
-                  <p>More stable live-game systems and cleaner player management flows.</p>
-                </div>
-              </div>
-              <div class="game-actions">
-                <a class="btn btn-primary" href="https://www.roblox.com/games/94279945101354/Morph-Tower" target="_blank" rel="noreferrer">View Game</a>
-                <a class="btn btn-secondary" href="https://www.youtube.com/watch?v=qXfE_DKKa-M" target="_blank" rel="noreferrer">Watch Demo</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="game-card reveal delay-1">
-            <div
-              class="video-player"
-              data-youtube-url="https://www.youtube.com/watch?v=KT8n_E3XCaY"
-              data-video-title="Clone Troll Tower gameplay"
-            >
-              <a class="video-fallback" href="https://www.youtube.com/watch?v=KT8n_E3XCaY" target="_blank" rel="noreferrer">
-                Watch Demo
-              </a>
-            </div>
-            <div class="game-card-body">
-              <div class="card-topline">
-                <span>Role: Systems scripting</span>
-                <span>9.3M+ visits</span>
-              </div>
-              <h3>Clone Troll Tower</h3>
-              <p class="game-summary">
-                Created core clone and revive systems, then supported the live gameplay loop with bug fixes.
-              </p>
-              <div class="game-tags" aria-label="Clone Troll Tower systems">
-                <span>Clone System</span>
-                <span>Revive Flow</span>
-                <span>Gameplay Fixes</span>
-                <span>Live Support</span>
-              </div>
-              <ul class="game-work">
-                <li>Built the clone system.</li>
-                <li>Built the revive flow.</li>
-                <li>Fixed gameplay bugs across the tower loop.</li>
-              </ul>
-              <div class="game-actions">
-                <a class="btn btn-primary" href="https://www.roblox.com/games/128576448886902/Clone-Troll-Tower" target="_blank" rel="noreferrer">View Game</a>
-                <a class="btn btn-secondary" href="https://www.youtube.com/watch?v=KT8n_E3XCaY" target="_blank" rel="noreferrer">Watch Demo</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="game-card reveal delay-2">
-            <div
-              class="video-player"
-              data-youtube-url="https://www.youtube.com/watch?v=lnOHTmkwfeQ"
-              data-video-title="French Riviera gameplay"
-            >
-              <a class="video-fallback" href="https://www.youtube.com/watch?v=lnOHTmkwfeQ" target="_blank" rel="noreferrer">
-                Watch Demo
-              </a>
-            </div>
-            <div class="game-card-body">
-              <div class="card-topline">
-                <span>Role: Systems support</span>
-                <span>13.2M+ visits</span>
-              </div>
-              <h3>French Riviera</h3>
-              <p class="game-summary">
-                Added to existing systems and fixed live gameplay issues before the game was taken down
-                due to usage of real car brands.
-              </p>
-              <div class="game-tags" aria-label="French Riviera systems">
-                <span>Existing Systems</span>
-                <span>Bug Fixes</span>
-                <span>Live Support</span>
-                <span>Gameplay Additions</span>
-              </div>
-              <ul class="game-work">
-                <li>Added to existing gameplay systems.</li>
-                <li>Fixed live gameplay issues.</li>
-                <li>Supported the game before brand-related takedown.</li>
-              </ul>
-              <div class="game-actions">
-                <a class="btn btn-primary" href="https://www.roblox.com/games/15499744097/New-Cars-Test-Place-FR" target="_blank" rel="noreferrer">View Game</a>
-                <a class="btn btn-secondary" href="https://www.youtube.com/watch?v=lnOHTmkwfeQ" target="_blank" rel="noreferrer">Watch Demo</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="game-card reveal">
-            <div
-              class="video-player"
-              data-youtube-url="https://www.youtube.com/watch?v=tpo1nFWhnTg"
-              data-video-title="Bigfoot gameplay"
-            >
-              <a class="video-fallback" href="https://www.youtube.com/watch?v=tpo1nFWhnTg" target="_blank" rel="noreferrer">
-                Watch Demo
-              </a>
-            </div>
-            <div class="game-card-body">
-              <div class="card-topline">
-                <span>Matterhorn Programmer</span>
-                <span>27M+ visits</span>
-              </div>
-              <h3>Bigfoot</h3>
-              <p class="game-summary">
-                Programmed systems for Matterhorn Studios, added multiple gameplay features, and fixed
-                bugs across an existing codebase.
-              </p>
-              <div class="game-tags" aria-label="Bigfoot systems">
-                <span>Game Systems</span>
-                <span>Bug Fixes</span>
-                <span>Existing Codebase</span>
-                <span>Feature Additions</span>
-              </div>
-              <ul class="game-work">
-                <li>Built and supported multiple gameplay systems.</li>
-                <li>Added features across an existing project.</li>
-                <li>Fixed bugs before the game was later taken down.</li>
-              </ul>
-              <div class="game-actions">
-                <a class="btn btn-primary" href="https://www.roblox.com/games/8288889383/Bigfoot-Elmiras-Update" target="_blank" rel="noreferrer">View Game</a>
-                <a class="btn btn-secondary" href="https://www.youtube.com/watch?v=tpo1nFWhnTg" target="_blank" rel="noreferrer">Watch Demo</a>
-              </div>
-            </div>
-          </article>
-        </div>
-        <p class="games-note reveal">More notable games I've contributed to will be listed soon.</p>
-      </section>
-
-      <section class="section shell proof-section" id="studios">
-        <div class="section-head reveal">
-          <p class="eyebrow">Social Proof</p>
-          <h2>Trusted by creators behind 100M+ visit Roblox experiences.</h2>
-          <p class="section-copy">Worked with teams and creators behind live Roblox games.</p>
-        </div>
-        <div class="studio-marquee-wrap reveal delay-1" aria-label="Studio logos moving banner">
-          <div class="studio-marquee">
-            <div class="studio-track">
-              <figure class="studio-logo logo-glamour">
-                <div class="logo-image" role="img" aria-label="Glamour Studios logo"></div>
-              </figure>
-              <figure class="studio-logo logo-rainbow">
-                <div class="logo-image" role="img" aria-label="Rainbow tower logo"></div>
-              </figure>
-              <figure class="studio-logo logo-riviera">
-                <div class="logo-image" role="img" aria-label="Riviera Development logo"></div>
-              </figure>
-              <figure class="studio-logo logo-hammer">
-                <div class="logo-image" role="img" aria-label="Hammer logo"></div>
-              </figure>
-              <figure class="studio-logo logo-hg">
-                <div class="logo-image" role="img" aria-label="HG creator logo"></div>
-              </figure>
-              <figure class="studio-logo logo-hand">
-                <div class="logo-image" role="img" aria-label="Waving hand logo"></div>
-              </figure>
-              <figure class="studio-logo logo-crate">
-                <div class="logo-image" role="img" aria-label="Red crate logo"></div>
-              </figure>
-              <figure class="studio-logo logo-f">
-                <div class="logo-image" role="img" aria-label="F letter logo"></div>
-              </figure>
-            </div>
-            <div class="studio-track" aria-hidden="true">
-              <figure class="studio-logo logo-glamour">
-                <div class="logo-image"></div>
-              </figure>
-              <figure class="studio-logo logo-rainbow">
-                <div class="logo-image"></div>
-              </figure>
-              <figure class="studio-logo logo-riviera">
-                <div class="logo-image"></div>
-              </figure>
-              <figure class="studio-logo logo-hammer">
-                <div class="logo-image"></div>
-              </figure>
-              <figure class="studio-logo logo-hg">
-                <div class="logo-image"></div>
-              </figure>
-              <figure class="studio-logo logo-hand">
-                <div class="logo-image"></div>
-              </figure>
-              <figure class="studio-logo logo-crate">
-                <div class="logo-image"></div>
-              </figure>
-              <figure class="studio-logo logo-f">
-                <div class="logo-image"></div>
-              </figure>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section shell" id="about">
-        <div class="section-head reveal">
-          <p class="eyebrow">Why Hire Me</p>
-          <h2>Clean Roblox systems that can survive real players.</h2>
-          <p class="section-copy">
-            I build Roblox systems with clean client-server boundaries, modular services, validation,
-            and predictable behavior, so your game can scale without turning into fragile code.
-          </p>
-        </div>
-        <div class="why-grid">
-          <article class="why-card reveal">
-            <h3>Server-authoritative logic</h3>
-            <p>Important economy, reward, purchase, and progression decisions stay validated on the server.</p>
-          </article>
-          <article class="why-card reveal delay-1">
-            <h3>Modular services</h3>
-            <p>Systems are organized into clear modules and service boundaries so future changes stay manageable.</p>
-          </article>
-          <article class="why-card reveal delay-2">
-            <h3>Clean UI and gameplay integration</h3>
-            <p>Menus, HUDs, remotes, animations, and player feedback are built to work with the gameplay loop.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section shell" id="services">
-        <div class="section-head reveal">
-          <p class="eyebrow">Services</p>
-          <h2>Systems I can build for your Roblox game.</h2>
-          <p class="section-copy">
-            Best fit for Roblox studios, solo creators, simulator developers, tower game creators,
-            tycoon developers, and teams needing reliable scripting support.
-          </p>
-        </div>
-        <div class="services-grid">
-          <article class="service-card reveal">
-            <h3>Gameplay Systems</h3>
-            <p>Combat, waves, rounds, abilities, loot, upgrades, quests, revive flows, and player progression.</p>
-          </article>
-          <article class="service-card reveal delay-1">
-            <h3>Backend and Saving</h3>
-            <p>DataStoreService, ProfileService, inventories, currencies, unlocks, settings, session safety, and validation.</p>
-          </article>
-          <article class="service-card reveal delay-2">
-            <h3>UI and Menus</h3>
-            <p>Shops, menus, HUDs, animations, mobile responsive layouts, feedback states, and management flows.</p>
-          </article>
-          <article class="service-card reveal">
-            <h3>Monetization</h3>
-            <p>Gamepasses, developer products, rewards, purchase validation, receipts, and exploit-resistant grant logic.</p>
-          </article>
-          <article class="service-card reveal delay-1">
-            <h3>Live Game Fixes</h3>
-            <p>Existing codebase support, gameplay bugs, UI issues, economy fixes, and fast turnaround debugging.</p>
-          </article>
-          <article class="service-card reveal delay-2">
-            <h3>Optimization</h3>
-            <p>Chunk loading, replication control, modular architecture, profiling, debugging, and refactoring.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section shell" id="systems">
-        <div class="section-head reveal">
-          <p class="eyebrow">Selected Systems</p>
-          <h2>Code-backed modules and gameplay foundations.</h2>
-          <p class="section-copy">Clients get proof from shipped games. Developers can also inspect module examples.</p>
-        </div>
-        <div class="systems-list">
-          <article class="system reveal">
-            <div class="system-main">
-              <span class="system-tag">Complexity: Gameplay pacing</span>
-              <h3>Wave Manager</h3>
-              <p>Scales difficulty, controls pacing, and exposes event hooks for UI and gameplay sync.</p>
-              <pre class="code-preview"><code>local nextWave = WaveService:GetWave(profile.Stage)
-local enemies = WaveBuilder.scale(nextWave, playerCount)
-
-WaveService.WaveStarted:Fire(nextWave.Index, enemies)
-Spawner:SpawnBatch(enemies, map.SpawnPoints)</code></pre>
-            </div>
-            <div class="system-actions">
-              <a href="https://github.com/syilfre/hd/blob/main/WaveSystem.lua" target="_blank" rel="noreferrer">View Code</a>
-              <a href="#games">View Demo</a>
-            </div>
-          </article>
-          <article class="system reveal delay-1">
-            <div class="system-main">
-              <span class="system-tag">Complexity: Persistent data</span>
-              <h3>Data Service Module</h3>
-              <p>Centralized profile/data access with safe updates, modular APIs, and durable persistence flow.</p>
-              <pre class="code-preview"><code>function DataService:UpdateCurrency(player, amount)
-  return self:Update(player, function(data)
-    data.Coins = math.max(0, data.Coins + amount)
-    return data
-  end)
-end</code></pre>
-            </div>
-            <div class="system-actions">
-              <a href="https://github.com/syilfre/DataService/blob/main/dataService.lua" target="_blank" rel="noreferrer">View Code</a>
-              <a href="#services">Use Case</a>
-            </div>
-          </article>
-          <article class="system reveal delay-2">
-            <div class="system-main">
-              <span class="system-tag">Complexity: Client optimization</span>
-              <h3>Client Chunk-Loader</h3>
-              <p>Client-side chunk generation and unloading to keep world rendering efficient and responsive.</p>
-              <pre class="code-preview"><code>for chunkId, chunk in ChunkMap:GetVisible(camera.Position) do
-  if not loadedChunks[chunkId] then
-    loadedChunks[chunkId] = Renderer:CreateChunk(chunk)
-  end
-end</code></pre>
-            </div>
-            <div class="system-actions">
-              <a href="https://github.com/syilfre/CodingExamples/blob/main/Client%20Chunk%20Generation.lua" target="_blank" rel="noreferrer">View Code</a>
-              <a href="#showcases">View Demo</a>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section shell" id="process">
-        <div class="section-head reveal">
-          <p class="eyebrow">Process</p>
-          <h2>Clear process from scope to delivery.</h2>
-        </div>
-        <ol class="timeline">
-          <li class="reveal">
-            <h3>01 Send scope</h3>
-            <p>Share the system, references, deadline, budget, and existing codebase status.</p>
-          </li>
-          <li class="reveal delay-1">
-            <h3>02 Review and quote</h3>
-            <p>I review the work and send scope questions, estimated time, and price.</p>
-          </li>
-          <li class="reveal delay-2">
-            <h3>03 Confirm deliverables</h3>
-            <p>We align the exact systems, files, payment method, and completion criteria.</p>
-          </li>
-          <li class="reveal">
-            <h3>04 Build and update</h3>
-            <p>I implement with modular code and send progress as needed for testing.</p>
-          </li>
-          <li class="reveal delay-1">
-            <h3>05 You test</h3>
-            <p>You test the behavior and send focused revisions before final delivery.</p>
-          </li>
-          <li class="reveal delay-2">
-            <h3>06 Final delivery</h3>
-            <p>Final files are delivered after approval and payment.</p>
-          </li>
-        </ol>
-      </section>
-
-      <section class="section shell" id="commission">
-        <div class="section-head reveal">
-          <p class="eyebrow">Commission Guide</p>
-          <h2>Payment and delivery terms.</h2>
-        </div>
-        <div class="guide-grid">
-          <article class="guide-block reveal">
-            <h3>Price Guidance</h3>
-            <ul>
-              <li><strong>Small fixes:</strong> usually start around $15 to $30.</li>
-              <li><strong>Gameplay systems:</strong> usually range from $50 to $150.</li>
-              <li><strong>Full game systems:</strong> quoted by scope.</li>
-            </ul>
-          </article>
-          <article class="guide-block reveal delay-1">
-            <h3>Payment Terms</h3>
-            <ul>
-              <li><strong>Payment:</strong> per task or upon completion.</li>
-              <li><strong>Larger scopes:</strong> split into agreed phases when needed.</li>
-              <li><strong>Methods:</strong> Crypto, PayPal, or Robux at DevEx rates plus tax.</li>
-            </ul>
-          </article>
-          <article class="guide-block reveal delay-2">
-            <h3>Delivery Policy</h3>
-            <ul>
-              <li><strong>Delivery:</strong> final files are sent after approval and payment.</li>
-              <li><strong>Refunds:</strong> unavailable after file delivery.</li>
-              <li><strong>Phases:</strong> communicated beforehand.</li>
-            </ul>
-          </article>
-          <article class="guide-block reveal">
-            <h3>What To Send</h3>
-            <ul>
-              <li>Game link or reference examples.</li>
-              <li>Systems needed, budget range, and deadline.</li>
-              <li>Existing codebase status and payment method.</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section class="section shell" id="faq">
-        <div class="section-head reveal">
-          <p class="eyebrow">FAQ</p>
-          <h2>Common commission questions.</h2>
-        </div>
-        <div class="faq-grid">
-          <details class="faq-item reveal">
-            <summary>Do you work with existing codebases?</summary>
-            <p>Yes. I can join an existing place, inspect the structure, and build around the current systems.</p>
-          </details>
-          <details class="faq-item reveal delay-1">
-            <summary>Can you build from scratch?</summary>
-            <p>Yes. I can build standalone systems or full gameplay foundations from a clean baseplate.</p>
-          </details>
-          <details class="faq-item reveal">
-            <summary>Do you handle DataStore and saving?</summary>
-            <p>Yes. I build saving, currencies, inventories, unlocks, session safety, and server validation.</p>
-          </details>
-          <details class="faq-item reveal delay-1">
-            <summary>Can you work with teams?</summary>
-            <p>Yes. I can collaborate with builders, UI designers, project owners, and other programmers.</p>
-          </details>
-          <details class="faq-item reveal delay-2">
-            <summary>How fast can you start?</summary>
-            <p>It depends on scope and current queue, but small tasks can often start quickly after quote approval.</p>
-          </details>
-          <details class="faq-item reveal">
-            <summary>What payment methods do you accept?</summary>
-            <p>Crypto, PayPal, and Robux at DevEx rates plus tax.</p>
-          </details>
-        </div>
-      </section>
-
-      <section class="section shell" id="contact">
-        <div class="final-cta reveal">
-          <div>
-            <p class="eyebrow">Contact</p>
-            <h2>Need a Roblox system built fast?</h2>
-            <p>
-              Currently taking on 2 new studio projects this month.
-              Send your game idea, reference examples, deadline, and budget. I will reply with scope,
-              estimated time, and price.
+        <div class="hero-shell shell reveal">
+          <div class="hero-command">
+            <p class="section-kicker">Roblox Luau systems developer</p>
+            <h1 class="hero-title" aria-label="syail">
+              <span class="title-bracket" aria-hidden="true">[</span>
+              <span class="hero-name">syail</span>
+              <span class="title-bracket" aria-hidden="true">]</span>
+            </h1>
+            <p class="hero-lead">
+              I build clean, scalable Roblox systems for front-page creators, live studios, and teams
+              that need gameplay, UI, DataStore, monetization, and backend work done right.
             </p>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="https://discord.com/users/1004306737525952572" target="_blank" rel="noreferrer">Message on Discord</a>
-              <a class="btn btn-secondary" href="https://www.roblox.com/users/6152191844/profile" target="_blank" rel="noreferrer">View Roblox Profile</a>
-              <a class="btn btn-ghost" href="https://github.com/syilfre" target="_blank" rel="noreferrer">Open GitHub</a>
+              <a class="btn btn-primary" href="#finished">View Work</a>
+              <a class="btn btn-secondary" href="#contact">Start Commission</a>
             </div>
           </div>
-          <form class="scope-form" id="commissionForm">
+
+          <aside class="command-card" aria-label="Portfolio highlights">
+            <p class="terminal-label">Command deck</p>
+            <ul class="signal-list">
+              <li>Server-authoritative gameplay</li>
+              <li>DataStore and economy safety</li>
+              <li>Fast live-game fixes</li>
+            </ul>
+            <dl class="stat-row">
+              <div>
+                <dt>Experience</dt>
+                <dd>3+ years</dd>
+              </div>
+              <div>
+                <dt>Reach</dt>
+                <dd>107M+ visits</dd>
+              </div>
+              <div>
+                <dt>Specialty</dt>
+                <dd>Systems + UI</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section-panel work-panel" id="finished">
+        <div class="panel shell reveal">
+          <div class="section-head">
+            <p class="section-kicker">Projects</p>
+            <h2>Games I have worked on</h2>
+            <p>Shipped work across real Roblox games, live player loops, and creator-owned codebases.</p>
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card">
+              <a
+                class="media-card"
+                href="https://www.youtube.com/watch?v=qXfE_DKKa-M"
+                target="_blank"
+                rel="noreferrer"
+                data-youtube-url="https://www.youtube.com/watch?v=qXfE_DKKa-M"
+                aria-label="Watch Morph Tower demo"
+              >
+                <span class="card-highlight">30k Peak CCU</span>
+                <span class="play-mark" aria-hidden="true"></span>
+              </a>
+              <div class="card-body">
+                <div class="card-title-row">
+                  <h3>Morph Tower</h3>
+                  <a class="play-link" href="https://www.roblox.com/games/94279945101354/Morph-Tower" target="_blank" rel="noreferrer">Play</a>
+                </div>
+                <p>UI, DataStore, currency, revive, spectate, troll menu systems, and live support.</p>
+                <div class="metric-row">
+                  <span>54.4M+ visits</span>
+                  <span>Systems scripting</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <a
+                class="media-card"
+                href="https://www.youtube.com/watch?v=KT8n_E3XCaY"
+                target="_blank"
+                rel="noreferrer"
+                data-youtube-url="https://www.youtube.com/watch?v=KT8n_E3XCaY"
+                aria-label="Watch Clone Troll Tower demo"
+              >
+                <span class="play-mark" aria-hidden="true"></span>
+              </a>
+              <div class="card-body">
+                <div class="card-title-row">
+                  <h3>Clone Troll Tower</h3>
+                  <a class="play-link" href="https://www.roblox.com/games/128576448886902/Clone-Troll-Tower" target="_blank" rel="noreferrer">Play</a>
+                </div>
+                <p>Core clone mechanics, revive flow, tower gameplay bug fixes, and live-game iteration.</p>
+                <div class="metric-row">
+                  <span>9.3M+ visits</span>
+                  <span>Gameplay systems</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <a
+                class="media-card"
+                href="https://www.youtube.com/watch?v=lnOHTmkwfeQ"
+                target="_blank"
+                rel="noreferrer"
+                data-youtube-url="https://www.youtube.com/watch?v=lnOHTmkwfeQ"
+                aria-label="Watch French Riviera demo"
+              >
+                <span class="play-mark" aria-hidden="true"></span>
+              </a>
+              <div class="card-body">
+                <div class="card-title-row">
+                  <h3>French Riviera</h3>
+                  <a class="play-link" href="https://www.roblox.com/games/15499744097/New-Cars-Test-Place-FR" target="_blank" rel="noreferrer">Play</a>
+                </div>
+                <p>Existing-system additions, live gameplay fixes, and feature support across the codebase.</p>
+                <div class="metric-row">
+                  <span>13.2M+ visits</span>
+                  <span>Live support</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <a
+                class="media-card"
+                href="https://www.youtube.com/watch?v=tpo1nFWhnTg"
+                target="_blank"
+                rel="noreferrer"
+                data-youtube-url="https://www.youtube.com/watch?v=tpo1nFWhnTg"
+                aria-label="Watch Bigfoot demo"
+              >
+                <span class="play-mark" aria-hidden="true"></span>
+              </a>
+              <div class="card-body">
+                <div class="card-title-row">
+                  <h3>Bigfoot</h3>
+                  <a class="play-link" href="https://www.roblox.com/games/8288889383/Bigfoot-Elmiras-Update" target="_blank" rel="noreferrer">Play</a>
+                </div>
+                <p>Gameplay systems, bug fixes, and production support for Matterhorn Studios.</p>
+                <div class="metric-row">
+                  <span>27M+ visits</span>
+                  <span>Matterhorn programmer</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="proof-strip section-panel">
+        <div class="proof-wrap shell reveal">
+          <div>
+            <p class="section-kicker">Featured proof</p>
+            <h2>
+              Commissioned by creators of
+              <a href="https://www.roblox.com/games/15444929588/Skibidi-Tower-Defense" target="_blank" rel="noreferrer">Skibidi Tower Defense</a>.
+            </h2>
+            <p>
+              I have scripted for creators behind a 718M+ visit Roblox experience, with support
+              across gameplay systems, fixes, and production integration.
+            </p>
+            <div class="proof-actions">
+              <a class="btn btn-primary" href="https://www.roblox.com/games/15444929588/Skibidi-Tower-Defense" target="_blank" rel="noreferrer">View Skibidi Tower Defense</a>
+              <a class="btn btn-secondary" href="#contact">Request similar support</a>
+            </div>
+          </div>
+          <div class="proof-badge">
+            <span>718M+</span>
+            <small>creator reach</small>
+          </div>
+        </div>
+        <div class="studio-marquee" aria-label="Studios and creators">
+          <div class="studio-track">
+            <img src="./assets/studios/glamour-studios.webp" alt="Glamour Studios" />
+            <img src="./assets/studios/rainbow-tower.webp" alt="Rainbow Tower" />
+            <img src="./assets/studios/riviera-development.webp" alt="Riviera Development" />
+            <img src="./assets/studios/hammer.webp" alt="Hammer" />
+            <img src="./assets/studios/hg.webp" alt="HG creator" />
+            <img src="./assets/studios/waving-hand.webp" alt="Waving hand creator" />
+            <img src="./assets/studios/red-crate.webp" alt="Red crate creator" />
+            <img src="./assets/studios/f-logo.webp" alt="F logo creator" />
+          </div>
+          <div class="studio-track" aria-hidden="true">
+            <img src="./assets/studios/glamour-studios.webp" alt="" />
+            <img src="./assets/studios/rainbow-tower.webp" alt="" />
+            <img src="./assets/studios/riviera-development.webp" alt="" />
+            <img src="./assets/studios/hammer.webp" alt="" />
+            <img src="./assets/studios/hg.webp" alt="" />
+            <img src="./assets/studios/waving-hand.webp" alt="" />
+            <img src="./assets/studios/red-crate.webp" alt="" />
+            <img src="./assets/studios/f-logo.webp" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section-panel systems-panel" id="systems">
+        <div class="panel shell reveal">
+          <div class="section-head">
+            <p class="section-kicker">Systems</p>
+            <h2>Reusable mechanics and scalable foundations</h2>
+            <p>Systems are built around clean client-server boundaries, validation, and readable modules.</p>
+          </div>
+
+          <div class="systems-grid">
+            <article class="system-card system-feature">
+              <div class="streamable-frame">
+                <iframe
+                  title="Real Estate Simulator showcase"
+                  src="https://streamable.com/e/4eb85q?"
+                  allow="fullscreen; picture-in-picture"
+                  allowfullscreen
+                  loading="lazy"
+                ></iframe>
+              </div>
+              <div class="system-copy">
+                <h3>Real Estate Simulator</h3>
+                <p>
+                  Property buying, loan financing, rental income, tenant management, resale,
+                  animated UI, and server-authoritative economy flow.
+                </p>
+                <a href="https://streamable.com/4eb85q" target="_blank" rel="noreferrer">Watch showcase</a>
+              </div>
+            </article>
+
+            <article class="system-card">
+              <span class="system-tag">Gameplay pacing</span>
+              <h3>Wave Manager</h3>
+              <p>Difficulty scaling, spawn batches, pacing controls, and events for UI/gameplay sync.</p>
+              <a href="https://github.com/syilfre/hd/blob/main/WaveSystem.lua" target="_blank" rel="noreferrer">View code</a>
+            </article>
+
+            <article class="system-card">
+              <span class="system-tag">Persistent data</span>
+              <h3>Data Service Module</h3>
+              <p>Centralized profile/data access, safe updates, currencies, inventory state, and persistence flow.</p>
+              <a href="https://github.com/syilfre/DataService/blob/main/dataService.lua" target="_blank" rel="noreferrer">View code</a>
+            </article>
+
+            <article class="system-card">
+              <span class="system-tag">Client optimization</span>
+              <h3>Client Chunk Loader</h3>
+              <p>Client-side chunk generation and unloading for responsive world rendering.</p>
+              <a href="https://github.com/syilfre/CodingExamples/blob/main/Client%20Chunk%20Generation.lua" target="_blank" rel="noreferrer">View code</a>
+            </article>
+
+            <article class="system-card">
+              <span class="system-tag">UI + monetization</span>
+              <h3>Shop and Menu Flows</h3>
+              <p>Gamepasses, developer products, rewards, receipts, mobile-friendly menus, and clear feedback states.</p>
+              <a href="#contact">Request system</a>
+            </article>
+
+            <article class="system-card">
+              <span class="system-tag">Live production</span>
+              <h3>Fixes and Integrations</h3>
+              <p>Existing codebase support, gameplay bug fixes, remote validation, refactors, and fast iteration.</p>
+              <a href="#contact">Send scope</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-panel rates-panel" id="rates">
+        <div class="rates-shell shell reveal">
+          <div class="section-head">
+            <p class="section-kicker">Options</p>
+            <h2>Payment Structures</h2>
+            <p>Choose the structure that fits the project scope and trust level.</p>
+          </div>
+
+          <div class="rate-grid" aria-label="Payment structures">
+            <article class="rate-card">
+              <span class="rate-icon" aria-hidden="true">01</span>
+              <h3>Upfront</h3>
+              <p>Pay the full amount before work begins. Best for small, clearly scoped tasks.</p>
+            </article>
+            <article class="rate-card">
+              <span class="rate-icon" aria-hidden="true">02</span>
+              <h3>Phases</h3>
+              <p>Split larger work into milestones, with each phase scoped and paid before the next starts.</p>
+            </article>
+            <article class="rate-card">
+              <span class="rate-icon" aria-hidden="true">03</span>
+              <h3>Per Task</h3>
+              <p>Pay after each completed task before moving into the next agreed item.</p>
+            </article>
+            <article class="rate-card">
+              <span class="rate-icon" aria-hidden="true">04</span>
+              <h3>Upon Completion</h3>
+              <p>Pay after the project is done. Available for trusted clients with good reputation.</p>
+            </article>
+          </div>
+
+          <div class="payment-methods">
+            <article>
+              <h3>USD</h3>
+              <p>PP, Crypto, or WISE.</p>
+              <div class="method-tags">
+                <span>PP</span>
+                <span>Crypto</span>
+                <span>WISE</span>
+              </div>
+            </article>
+            <article>
+              <h3>Robux</h3>
+              <p>Payouts with 2-week delay, or developer product payment.</p>
+              <div class="method-tags">
+                <span>Payouts</span>
+                <span>2-week delay</span>
+                <span>Product</span>
+              </div>
+            </article>
+            <article>
+              <h3>Terms</h3>
+              <p>Inclusive of taxes, calculated at DevEx rates, and No % or revenue-share deals.</p>
+              <div class="method-tags">
+                <span>Taxes included</span>
+                <span>DevEx rates</span>
+                <span>No %</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-panel contact-panel" id="contact">
+        <div class="contact-shell shell reveal">
+          <div class="contact-copy">
+            <p class="section-kicker">Contact</p>
+            <h2>Need a Roblox system built?</h2>
+            <p>
+              Send the system, references, deadline, budget, existing codebase status, and preferred
+              payment method. I will reply with scope questions, estimated time, and price.
+            </p>
+            <div class="contact-links">
+              <a class="btn btn-primary" href="https://discord.com/users/1004306737525952572" target="_blank" rel="noreferrer">Message on Discord</a>
+              <a class="btn btn-secondary" href="https://www.roblox.com/users/6152191844/profile" target="_blank" rel="noreferrer">Roblox Profile</a>
+              <a class="btn btn-secondary" href="https://github.com/syilfre" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+          </div>
+
+          <form class="scope-form" id="scopeForm">
             <label>
-              Name
-              <input name="name" autocomplete="name" placeholder="Your name or studio" required />
+              Name or studio
+              <input name="name" autocomplete="name" placeholder="Your name" required />
             </label>
             <label>
               Discord
@@ -649,36 +414,39 @@ end</code></pre>
               Project type
               <select name="projectType" required>
                 <option value="">Choose one</option>
-                <option>Bug fixes</option>
                 <option>Gameplay system</option>
-                <option>UI system</option>
-                <option>Backend/DataStore</option>
-                <option>Full game prototype</option>
+                <option>UI or menu system</option>
+                <option>Backend or DataStore</option>
+                <option>Bug fixes</option>
+                <option>Full prototype</option>
+              </select>
+            </label>
+            <label>
+              Payment method
+              <select name="paymentMethod" required>
+                <option value="">Choose one</option>
+                <option>USD - PayPal</option>
+                <option>USD - Crypto</option>
+                <option>USD - Wise</option>
+                <option>Robux - Payout</option>
+                <option>Robux - Developer Product</option>
               </select>
             </label>
             <label>
               Budget
-              <input name="budget" placeholder="$50-$150, Robux, etc." />
+              <input name="budget" placeholder="$100, 30k Robux, etc." />
             </label>
             <label>
               Deadline
-              <input name="deadline" placeholder="Date or turnaround needed" />
-            </label>
-            <label>
-              Existing codebase?
-              <select name="existingCodebase">
-                <option>Yes</option>
-                <option>No</option>
-                <option>Not sure</option>
-              </select>
+              <input name="deadline" placeholder="Date or turnaround" />
             </label>
             <label class="form-wide">
-              Description and references
-              <textarea name="description" rows="4" placeholder="What should be built? Add game links, references, and important details." required></textarea>
+              Scope and references
+              <textarea name="scope" rows="5" placeholder="Describe the system, references, current codebase, and acceptance criteria." required></textarea>
             </label>
             <button class="btn btn-primary form-wide" type="submit">Build Scope Summary</button>
             <p class="form-status form-wide" id="formStatus" aria-live="polite"></p>
-            <textarea class="scope-summary form-wide" id="scopeSummary" rows="6" readonly hidden></textarea>
+            <textarea class="scope-summary form-wide" id="scopeSummary" rows="7" readonly hidden></textarea>
           </form>
         </div>
       </section>
@@ -686,18 +454,8 @@ end</code></pre>
 
     <footer class="site-footer">
       <div class="shell footer-wrap">
-        <div class="footer-meta">
-          <p>&copy; <span id="year"></span> syilfre. All rights reserved.</p>
-          <p class="footer-terms">
-            By commissioning, you agree to the
-            <a href="#commission">Commission Guide</a> terms and refund policy.
-          </p>
-        </div>
-        <div class="footer-links">
-          <a class="footer-primary" href="https://discord.com/users/1004306737525952572" target="_blank" rel="noreferrer">Message on Discord</a>
-          <a href="https://github.com/syilfre" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="https://www.roblox.com/users/6152191844/profile" target="_blank" rel="noreferrer">Roblox</a>
-        </div>
+        <p>&copy; <span id="year"></span> syail. Roblox Luau systems developer.</p>
+        <a href="#home">Back to top</a>
       </div>
     </footer>
 
