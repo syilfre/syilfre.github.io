@@ -1,13 +1,11 @@
 const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
 const navAnchors = document.querySelectorAll(".nav-links a");
-const revealItems = document.querySelectorAll(".reveal");
 const mediaCards = document.querySelectorAll("[data-youtube-url]");
 const yearNode = document.getElementById("year");
 const scopeForm = document.getElementById("scopeForm");
 const formStatus = document.getElementById("formStatus");
 const scopeSummary = document.getElementById("scopeSummary");
-const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 if (yearNode) {
   yearNode.textContent = String(new Date().getFullYear());
@@ -62,46 +60,6 @@ if (sections.length > 0) {
   );
 
   sections.forEach((section) => navObserver.observe(section));
-}
-
-if (reduceMotion) {
-  revealItems.forEach((item) => item.classList.add("visible"));
-} else {
-  const showVisibleReveals = () => {
-    revealItems.forEach((item) => {
-      if (item.classList.contains("visible")) {
-        return;
-      }
-
-      const rect = item.getBoundingClientRect();
-
-      if (rect.top < window.innerHeight + 180 && rect.bottom > 0) {
-        item.classList.add("visible");
-      }
-    });
-  };
-
-  const revealObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    },
-    {
-      rootMargin: "0px 0px 180px 0px",
-      threshold: 0.16,
-    }
-  );
-
-  revealItems.forEach((item) => revealObserver.observe(item));
-  requestAnimationFrame(showVisibleReveals);
-  setTimeout(showVisibleReveals, 500);
-  setTimeout(showVisibleReveals, 1400);
-  window.addEventListener("hashchange", () => requestAnimationFrame(showVisibleReveals));
-  window.addEventListener("load", () => setTimeout(showVisibleReveals, 120));
 }
 
 const getYouTubeId = (url) => {

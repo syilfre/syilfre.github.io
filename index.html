@@ -19,7 +19,6 @@
   </head>
   <body>
     <div class="grid-bg" aria-hidden="true"></div>
-    <div class="scanline" aria-hidden="true"></div>
 
     <header class="site-header">
       <nav class="nav shell" aria-label="Main navigation">
@@ -50,32 +49,47 @@
 
     <main>
       <section class="hero section-panel" id="home">
-        <div class="hero-lines" aria-hidden="true">
-          <span class="line line-left"></span>
-          <span class="line line-right"></span>
-          <span class="spark spark-one"></span>
-          <span class="spark spark-two"></span>
-          <span class="spark spark-three"></span>
-        </div>
         <div class="black-hole-wrap" aria-hidden="true">
           <img src="./assets/space/black-hole.png" alt="" loading="eager" decoding="async" />
         </div>
-        <div class="hero-shell shell reveal">
+        <div class="hero-shell shell">
           <div class="hero-command">
-            <p class="section-kicker">Roblox Luau systems developer</p>
+            <p class="hero-role">Roblox Luau systems developer</p>
             <h1 class="hero-title" aria-label="syail">
               <span class="title-bracket" aria-hidden="true">[</span>
               <span class="hero-name">syail</span>
               <span class="title-bracket" aria-hidden="true">]</span>
             </h1>
             <p class="hero-lead">
-              I build clean, scalable Roblox systems for front-page creators, live studios, and teams
-              that need gameplay, UI, DataStore, monetization, and backend work done right.
+              I build and maintain Roblox gameplay, UI, data, monetization, and backend systems for
+              live games and creator teams.
             </p>
             <div class="hero-actions">
               <a class="btn btn-primary" href="#finished">View Work</a>
               <a class="btn btn-secondary" href="#contact">Start Commission</a>
             </div>
+            <dl class="tool-groups">
+              <div class="tool-group">
+                <dt>Development</dt>
+                <dd>
+                  <span>Azul</span>
+                  <span>Rokit</span>
+                  <span>Wally</span>
+                  <span>Luau LSP</span>
+                  <span>StyLua</span>
+                  <span>Selene</span>
+                </dd>
+              </div>
+              <div class="tool-group">
+                <dt>Runtime</dt>
+                <dd>
+                  <span>ProfileStore</span>
+                  <span>Signal</span>
+                  <span>Trove</span>
+                  <span>Component</span>
+                </dd>
+              </div>
+            </dl>
           </div>
 
           <aside class="command-card" aria-label="Portfolio highlights">
@@ -88,11 +102,11 @@
             <dl class="stat-row">
               <div>
                 <dt>Experience</dt>
-                <dd>3+ years</dd>
+                <dd>4+ years</dd>
               </div>
               <div>
                 <dt>Reach</dt>
-                <dd>107M+ visits</dd>
+                <dd>108M+ Visits</dd>
               </div>
               <div>
                 <dt>Specialty</dt>
@@ -104,11 +118,10 @@
       </section>
 
       <section class="section-panel work-panel" id="finished">
-        <div class="panel shell reveal">
+        <div class="panel shell">
           <div class="section-head">
-            <p class="section-kicker">Projects</p>
             <h2>Games I have worked on</h2>
-            <p>Shipped work across real Roblox games, live player loops, and creator-owned codebases.</p>
+            <p>Production work across live Roblox games and creator-owned codebases.</p>
           </div>
 
           <div class="project-grid">
@@ -208,30 +221,50 @@
                 </div>
               </div>
             </article>
+
+            <article class="project-card project-card-wide">
+              <a
+                class="media-card"
+                href="https://www.roblox.com/games/72971764459344/1-Speed-Vehicle-Evolve"
+                target="_blank"
+                rel="noreferrer"
+                data-youtube-url="https://www.youtube.com/watch?v=LlSJSoFf-x4&t"
+                aria-label="Play 1 Speed Vehicle Evolve on Roblox"
+              >
+                <span class="card-highlight">1.1K Peak CCU</span>
+                <span class="play-mark" aria-hidden="true"></span>
+              </a>
+              <div class="card-body">
+                <div class="card-title-row">
+                  <h3>1 Speed Vehicle Evolve</h3>
+                  <a class="play-link" href="https://www.roblox.com/games/72971764459344/1-Speed-Vehicle-Evolve" target="_blank" rel="noreferrer">Play</a>
+                </div>
+                <p>Development work for a live vehicle progression experience.</p>
+                <div class="metric-row">
+                  <span>Vehicle progression</span>
+                  <span>Live game</span>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
       </section>
 
       <section class="proof-strip section-panel">
-        <div class="proof-wrap shell reveal">
+        <div class="proof-wrap shell">
           <div>
-            <p class="section-kicker">Featured proof</p>
             <h2>
               Commissioned by creators of
               <a href="https://www.roblox.com/games/15444929588/Skibidi-Tower-Defense" target="_blank" rel="noreferrer">Skibidi Tower Defense</a>.
             </h2>
             <p>
-              I have scripted for creators behind a 718M+ visit Roblox experience, with support
-              across gameplay systems, fixes, and production integration.
+              I have supported creators behind a 718M+ visit Roblox experience with gameplay
+              systems, fixes, and production integration.
             </p>
             <div class="proof-actions">
               <a class="btn btn-primary" href="https://www.roblox.com/games/15444929588/Skibidi-Tower-Defense" target="_blank" rel="noreferrer">View Skibidi Tower Defense</a>
               <a class="btn btn-secondary" href="#contact">Request similar support</a>
             </div>
-          </div>
-          <div class="proof-badge">
-            <span>718M+</span>
-            <small>creator reach</small>
           </div>
         </div>
         <div class="studio-marquee" aria-label="Studios and creators">
@@ -259,11 +292,10 @@
       </section>
 
       <section class="section-panel systems-panel" id="systems">
-        <div class="panel shell reveal">
+        <div class="panel shell">
           <div class="section-head">
-            <p class="section-kicker">Systems</p>
-            <h2>Reusable mechanics and scalable foundations</h2>
-            <p>Systems are built around clean client-server boundaries, validation, and readable modules.</p>
+            <h2>Systems I build and maintain</h2>
+            <p>Client-server gameplay, persistent data, economies, UI flows, and production fixes.</p>
           </div>
 
           <div class="systems-grid">
@@ -326,31 +358,26 @@
       </section>
 
       <section class="section-panel rates-panel" id="rates">
-        <div class="rates-shell shell reveal">
+        <div class="rates-shell shell">
           <div class="section-head">
-            <p class="section-kicker">Options</p>
             <h2>Payment Structures</h2>
             <p>Choose the structure that fits the project scope and trust level.</p>
           </div>
 
           <div class="rate-grid" aria-label="Payment structures">
             <article class="rate-card">
-              <span class="rate-icon" aria-hidden="true">01</span>
               <h3>Upfront</h3>
               <p>Pay the full amount before work begins. Best for small, clearly scoped tasks.</p>
             </article>
             <article class="rate-card">
-              <span class="rate-icon" aria-hidden="true">02</span>
               <h3>Phases</h3>
               <p>Split larger work into milestones, with each phase scoped and paid before the next starts.</p>
             </article>
             <article class="rate-card">
-              <span class="rate-icon" aria-hidden="true">03</span>
               <h3>Per Task</h3>
               <p>Pay after each completed task before moving into the next agreed item.</p>
             </article>
             <article class="rate-card">
-              <span class="rate-icon" aria-hidden="true">04</span>
               <h3>Upon Completion</h3>
               <p>Pay after the project is done. Available for trusted clients with good reputation.</p>
             </article>
@@ -390,9 +417,8 @@
       </section>
 
       <section class="section-panel contact-panel" id="contact">
-        <div class="contact-shell shell reveal">
+        <div class="contact-shell shell">
           <div class="contact-copy">
-            <p class="section-kicker">Contact</p>
             <h2>Need a Roblox system built?</h2>
             <p>
               Send the system, references, deadline, budget, existing codebase status, and preferred
